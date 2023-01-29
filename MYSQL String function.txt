@@ -1,0 +1,187 @@
+MYSQL REFERENCE STRING FUNCTION
+-------------------------------
+
+1) Example
+Return the ASCII value of the first character in "CustomerName":
+
+SELECT ASCII(CustomerName) AS NumCodeOfFirstChar
+FROM Customers;
+
+2)Example
+Return the length of the string:
+
+SELECT CHAR_LENGTH("SQL Tutorial") AS LengthOfString;
+
+3)Example
+Return the length of the string:
+
+SELECT CHARACTER_LENGTH("SQL Tutorial") AS LengthOfString;
+
+
+4)Example
+Add several strings together:
+
+SELECT CONCAT("SQL ", "Tutorial ", "is ", "fun!") AS ConcatenatedString;
+
+5)Example
+Add several expressions together, and add a "-" separator between them:
+
+SELECT CONCAT_WS("-", "SQL", "Tutorial", "is", "fun!") AS ConcatenatedString;
+
+
+6)Example
+Return the index position of  "q" in the string list:
+
+SELECT FIELD("q", "s", "q", "l");
+
+
+7)Example
+Search for "q" within the list of strings:
+
+SELECT FIND_IN_SET("q", "s,q,l");
+
+8)Example
+Format the number as "#,###,###.##" (and round with two decimal places):
+
+SELECT FORMAT(250500.5634, 2);
+
+
+9)Example
+Insert the string "Example" into the string "W3Schools.com". Replace the first nine characters:
+
+SELECT INSERT("W3Schools.com", 1, 9, "Example");
+
+
+10)Example
+Search for "3" in string "W3Schools.com", and return position:
+
+SELECT INSTR("W3Schools.com", "3") AS MatchPosition;
+
+11)Example
+Extract 3 characters from a string (starting from left):
+
+SELECT LEFT("SQL Tutorial", 3) AS ExtractString;
+
+
+12)Example
+Return the length of the string, in bytes:
+
+SELECT LENGTH("SQL Tutorial") AS LengthOfString;
+
+
+13)Example
+Convert the text to lower-case:
+
+SELECT LOWER("SQL Tutorial is FUN!");
+
+
+
+14)Left-pad the string with "ABC", to a total length of 20:
+
+SELECT LPAD("SQL Tutorial", 20, "ABC");
+
+
+
+15)Example
+Remove leading spaces from a string:
+
+SELECT LTRIM("     SQL Tutorial") AS LeftTrimmedString;
+
+
+16)Example
+Extract a substring from a string (start at position 5, extract 3 characters):
+
+SELECT MID("SQL Tutorial", 5, 3) AS ExtractString;
+
+
+17)Example
+Search for "3" in string "W3Schools.com", and return position:
+
+SELECT POSITION("3" IN "W3Schools.com") AS MatchPosition;
+
+
+
+18)Example
+Repeat a string 3 times:
+
+SELECT REPEAT("SQL Tutorial", 3);
+
+
+19)Example
+Replace "SQL" with "HTML":
+
+SELECT REPLACE("SQL Tutorial", "SQL", "HTML");
+
+
+20)Example
+Reverse a string:
+
+SELECT REVERSE("SQL Tutorial");
+
+
+21)Example
+Extract 4 characters from a string (starting from right):
+
+SELECT RIGHT("SQL Tutorial is cool", 4) AS ExtractString;
+
+
+22)Example
+Extract a substring from a string (start at position 5, extract 3 characters):
+
+SELECT SUBSTRING("SQL Tutorial", 5, 3) AS ExtractString;
+
+
+
+23)Example
+Return a substring of a string before a specified number of delimiter occurs:
+
+SELECT SUBSTRING_INDEX("www.w3schools.com", ".", 1);
+
+
+24)Example
+Convert the text to upper-case:
+
+SELECT UCASE("SQL Tutorial is FUN!");
+
+
+25)Example
+Convert the text to upper-case:
+
+SELECT UPPER("SQL Tutorial is FUN!");
+ ------------------------------------------------ Numeric Functions -----------------------------------------------------------------------
+
+1)Example
+Integer division (10/5):
+SELECT 10 DIV 5;
+
+2)Example
+Return the number of products in the "Products" table:
+SELECT COUNT(ProductID) AS NumberOfProducts FROM Products;
+
+
+3)Example
+Convert the radian value into degrees:
+SELECT DEGREES(1.5);
+
+4)Find the price of the most expensive product in the "Products" table:
+SELECT MAX(Price) AS LargestPrice FROM Products;
+
+
+5)Find the price of the most expensive product in the "Products" table:
+SELECT MAX(Price) AS LargestPrice FROM Products;
+
+
+6)Return the value of PI:
+SELECT PI();
+
+7)Return 4 raised to the second power:
+SELECT POWER(4, 2);
+
+
+8)Return the sum of the "Quantity" field in the "OrderDetails" table:
+SELECT SUM(Quantity) AS TotalItemsOrdered FROM OrderDetails;
+
+
+9)Return a number truncated to 2 decimal places:
+SELECT TRUNCATE(135.375, 2);
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
